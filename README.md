@@ -7,14 +7,14 @@
   [线上体验地址](https://www.isgxj.com/txgobang/)  
   
   
-使用方式  
+## 使用方式  
   一、引入base.css  
   二、引入三个js  
     1、dom方式实现的五子棋类 GobangBoardDom.js  
     2、canvas方式实现的五子棋类 GobangBoardCanvas.js  
     3、游戏控制的类 Gobang.js  
       
-##使用方法  
+## 初始化  
 ```javascript  
   // 配置参数  
   const ops = {  
@@ -39,7 +39,7 @@
   ctl.start()  
  ```
 
-##判断输赢的算法  
+## 判断输赢的算法  
 ```javascript  
   // 判断输赢
   isWin (x, y) {
