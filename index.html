@@ -38,10 +38,12 @@
           number: 5
         }
       }
+      // 实例化游戏控制器
       const ctl = new Gobang({
         ops,
         timeEl: document.getElementById('time')
       })
+      // 开始游戏
       ctl.start()
 
       // 悔棋
