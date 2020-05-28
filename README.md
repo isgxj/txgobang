@@ -2,7 +2,7 @@
 
   支持dom渲染和canvas渲染切换  
   支持悔棋和撤销悔棋  
-  
+  ![Image text](https://github.com/isgxj/txgobang/raw/master/gobang.jpg)
   
   
 使用方式  
