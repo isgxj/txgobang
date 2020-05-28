@@ -4,7 +4,7 @@
   支持悔棋、撤销悔棋  
 
 
-  [线上体验地址](https://www.isgxj.com/txgobang/)  
+  <a href="https://www.isgxj.com/txgobang/" target="_blank">线上体验地址</a>  
   
   ![Image text](https://www.isgxj.com/gobang.jpg)
   
