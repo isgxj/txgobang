@@ -6,8 +6,6 @@
 
   <a href="https://www.isgxj.com/txgobang/" target="_blank">线上体验地址</a>  
   
-  ![Image text](https://www.isgxj.com/gobang.jpg)
-  
   
 使用方式  
   一、引入css  
