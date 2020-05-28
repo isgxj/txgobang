@@ -8,11 +8,11 @@
   
   
 使用方式  
-  >一、引入css  
-  >二、引入三个js  
-    >>1、dom方式实现的五子棋类GobangBoardDom.js  
-    >>2、canvas方式实现的五子棋类GobangBoardCanvas.js  
-    >>3、游戏控制的类Gobang.js  
+  > 一、引入css  
+  > 二、引入三个js  
+    >> 1、dom方式实现的五子棋类GobangBoardDom.js  
+    >> 2、canvas方式实现的五子棋类GobangBoardCanvas.js  
+    >> 3、游戏控制的类Gobang.js  
       
 游戏控制器初始化  
 ```javascript
