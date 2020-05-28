@@ -15,6 +15,7 @@
     3、游戏控制的类Gobang.js  
       
 游戏控制器初始化  
+···javascript
       // 配置参数  
       const ops = {  
         el: document.getElementById('app'),  
@@ -36,3 +37,4 @@
       })  
       // 开始游戏  
       ctl.start()  
+ ```
