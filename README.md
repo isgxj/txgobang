@@ -1,5 +1,5 @@
-# txgobang  
-## 腾讯面试五子棋 
+# txgobang  腾讯面试五子棋 
+
   支持dom渲染和canvas渲染切换  
   支持悔棋和撤销悔棋  
   
