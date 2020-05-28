@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 1000px;
+    background: #ca935b;
+}
+.app-wrap {
+    text-align: center;
+}
+
+/*控制器样式*/
+.game-ctl {
+    padding-top: 50px;
+    text-align: center;
+}
+.game-ctl button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 1.25em;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.2), inset 0 2px 0 hsla(0,0%,100%,.1), inset 0 1.2em 0 hsla(0,0%,100%,0.1), inset 0 -0.2em 0 hsla(0,0%,100%,.1), inset 0 -0.25em 0 hsla(0,0%,0%,.25), 0 0.25em 0.25em hsla(0,0%,0%,.05);
+    background-color: #6fcf6f;
+    background-image: -webkit-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+    background-image: -moz-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+    background-image: -ms-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+    background-image: -o-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+    background-image: linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+    transition: all .3s;
+}
+.game-ctl button:hover {
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.2), inset 0 2px 0 hsla(0,0%,100%,.1), inset 0 1.2em 0 hsla(0,0%,100%,.1), inset 0 -0.2em 0 hsla(0,0%,100%,.1), inset 0 -0.25em 0 hsla(0,0%,0%,.25), inset 0 0 0 3em hsla(0,0%,100%,.2), 0 0.25em 0.25em hsla(0,0%,0%,.05);
+}
+.game-ctl button:active {
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.2), inset 0 2px 0 hsla(0,0%,100%,.1), inset 0 1.2em 0 hsla(0,0%,100%,.1), inset 0 0 0 3em hsla(0,0%,100%,.2), inset 0 0.25em 0.5em hsla(0,0%,0%,.05), 0 -1px 1px hsla(0,0%,0%,.1), 0 1px 1px hsla(0,0%,100%,.25);
+}
+.game-state {
+    padding-top: 30px;
+    text-align: center;
+}
+
+/*棋盘样式*/
+.game-gobang {
+    display: inline-block;
+    position: relative;
+}
+.game-gobang canvas.absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.game-gobang .line {
+    float: left;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    position: relative;
+}
+.game-gobang .line.clearx:before {
+    display: none;
+}
+.game-gobang .line.cleary:after {
+    display: none;
+}
+.game-gobang .line:before,
+.game-gobang .line:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+.game-gobang .line:after {
+    width: auto;
+    height: 100%;
+    border-left: 1px solid #333;
+}
+.game-gobang .line .chess {
+    display: block;
+    width: 90%;
+    height: 90%;
+    font-size: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/*白棋样式*/
+.white-chess {
+    background: radial-gradient(15px 15px at 15px 15px, #fff, #e2e2e2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*黑棋样式*/
+.black-chess {
+    background: radial-gradient(10px 10px at 15px 15px, #fff, #333);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

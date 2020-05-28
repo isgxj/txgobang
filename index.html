@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五子棋</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="game-ctl">
+      <button onclick="back()">悔棋</button>
+      <button onclick="unback()">撤销悔棋</button>
+      <button onclick="restart()">重来</button>
+      <button onclick="stop()">停止</button>
+      <button onclick="toogleCtl(this)">切换成canvas渲染</button>
+    </div>
+    <div class="game-state">
+      <p>游戏用时：<span id="time">0</span>秒</p>
+      <p>下一步：<span id="role">黑棋</span></p>
+    </div>
+    <div class="app-wrap" onclick="setRole()">
+      <div id="app" class="game-gobang"></div>
+    </div>
+    <script src="GobangBoardDom.js"></script>
+    <script src="GobangBoardCanvas.js"></script>
+    <script src="Gobang.js"></script>
+    <script>
+      // 配置参数
+      const ops = {
+        el: document.getElementById('app'),
+        config: {
+          // 方格大小
+          size: 40,
+          // 行数
+          row: 16,
+          // 列数
+          col: 16,
+          // 几子棋
+          number: 5
+        }
+      }
+      const ctl = new Gobang({
+        ops,
+        timeEl: document.getElementById('time')
+      })
+      ctl.start()
+
+      // 悔棋
+      function back () {
+        ctl.goback()
+      }
+
+      // 撤销悔棋
+      function unback () {
+        ctl.unGoback()
+      }
+
+      // 重新开始
+      function restart () {
+        ctl.start()
+      }
+
+      // 停止
+      function stop () {
+        ctl.stop()
+      }
+
+      // 切换渲染模式
+      function toogleCtl (obj) {
+        ctl.toogleCtl()
+        const mode = ctl.gobang === ctl.dom ? 'canvas' : 'dom'
+        obj.innerText = `切换成${mode}渲染`
+        setRole()
+      }
+
+      const roleEl = document.getElementById('role')
+      function setRole () {
+        roleEl.innerText = ctl.getRole()
+      }
+    </script>
+</body>
+</html>
